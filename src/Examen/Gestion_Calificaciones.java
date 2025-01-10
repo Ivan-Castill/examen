@@ -37,11 +37,7 @@ public class Gestion_Calificaciones extends JFrame {
                 String pooNota = notaPoo.getText();
                 String disenioNota = notaDiseño.getText();
 
-                if (ingresoDatos(idEstudiante,nombreEstudiante,cedulaEstudiante,matematicasNota,lenguajeNota,programacionNota,pooNota,disenioNota)){
-                    JOptionPane.showConfirmDialog(null, "Se a realizado el ingreso de datos.\n Exitosamente");
-                }else{
 
-                }
 
             }
         });

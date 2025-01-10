@@ -32,6 +32,7 @@ public class Login extends JFrame{
                     gestionCalificaciones.visualizar();
                     parentFrame.dispose();
 
+
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrectos", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
