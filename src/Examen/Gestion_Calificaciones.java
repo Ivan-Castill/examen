@@ -5,28 +5,43 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Gestión_Calificaciones extends JFrame {
-    private JTextField textField1;
-    private JPanel panel1;
-    private JTextField textField2;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+public class Gestion_Calificaciones extends JFrame {
+    private JTextField textid;
+    private JPanel panelgestor;
+    private JTextField textnombre;
+    private JTextField textcedula;
+    private JTextField notaMatematica;
+    private JTextField notaLenguaje;
+    private JTextField notaProgramacion;
+    private JTextField notaPoo;
+    private JTextField notaDiseño;
     private JButton registrarDatosButton;
 
-    public Gestión_Calificaciones() {
+    public Gestion_Calificaciones() {
+        setContentPane(panelgestor);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,300);
-        setPreferredSize(new Dimension(500,300));
+        setSize(1000,500);
+        setPreferredSize(new Dimension(1000,500));
         pack();
         setVisible(true);
         setLocationRelativeTo(null);
         registrarDatosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String idEstudiante = textid.getText();
+                String nombreEstudiante = textnombre.getText();
+                String cedulaEstudiante = textcedula.getText();
+                String matematicasNota = notaMatematica.getText();
+                String lenguajeNota = notaLenguaje.getText();
+                String programacionNota = notaProgramacion.getText();
+                String pooNota = notaPoo.getText();
+                String disenioNota = notaDiseño.getText();
+
+                if (ingresoDatos(idEstudiante,nombreEstudiante,cedulaEstudiante,matematicasNota,lenguajeNota,programacionNota,pooNota,disenioNota)){
+                    JOptionPane.showConfirmDialog(null, "Se a realizado el ingreso de datos.\n Exitosamente");
+                }else{
+
+                }
 
             }
         });
